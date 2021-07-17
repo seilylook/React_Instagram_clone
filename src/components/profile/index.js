@@ -5,10 +5,10 @@ import Photos from "./photos";
 import { getUserPhotosByUserId } from "../../services/firebase";
 
 export default function Profile({ user }) {
-  const reduecer = (state, newState) => ({ ...state, ...newState });
+  const reducer = (state, newState) => ({ ...state, ...newState });
   const initialState = {
     profile: {},
-    photoCollection: null,
+    photosCollection: null,
     followerCount: 0
   };
 
@@ -23,7 +23,7 @@ export default function Profile({ user }) {
       dispatch({
         profile: user,
         photosCollection: photos,
-        follwerCount: user.followers.length
+        followerCount: user.followers.length
       });
     }
     getProfileInfoAndPhotos();
@@ -44,7 +44,7 @@ export default function Profile({ user }) {
 
 Profile.propTypes = {
   user: PropTypes.shape({
-    dataCreated: PropTypes.number,
+    dateCreated: PropTypes.number,
     emailAddress: PropTypes.string,
     followers: PropTypes.array,
     following: PropTypes.array,

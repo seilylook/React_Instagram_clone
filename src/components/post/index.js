@@ -6,11 +6,12 @@ import Actions from "./actions";
 import Footer from "./footer";
 import Comments from "./comments";
 
-export default function Post({ context }) {
+export default function Post({ content }) {
   const commentInput = useRef(null);
-
   const handleFocus = () => commentInput.current.focus();
 
+  // components
+  // -> header, image, actions (like & comment icons), footer, comments
   return (
     <div className="rounded col-span-4 border bg-white border-gray-primary mb-12">
       <Header username={content.username} />

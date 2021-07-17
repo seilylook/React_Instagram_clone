@@ -4,7 +4,7 @@ export default function Image({ src, caption }) {
   return <img src={src} alt={caption} />;
 }
 
-Image.PropTypes = {
+Image.propTypes = {
   src: PropTypes.string.isRequired,
   caption: PropTypes.string.isRequired
 };

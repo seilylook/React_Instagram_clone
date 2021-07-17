@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
-import { DEFAULT_IMAGE_PATH } from "../../constans/paths";
+import { DEFAULT_IMAGE_PATH } from "../../constants/paths";
 
-export default function User({ username, fullname }) {
+export default function User({ username, fullName }) {
   return !username || !fullName ? (
     <Skeleton count={1} height={61} />
   ) : (
@@ -31,5 +31,5 @@ export default function User({ username, fullname }) {
 
 User.propTypes = {
   username: PropTypes.string,
-  fullname: PropTypes.string
+  fullName: PropTypes.string
 };
